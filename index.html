@@ -20,6 +20,7 @@
 		/>
 		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 		<link href="./css/styles.css" rel="stylesheet" />
+		<link href="./css/media.css" rel="stylesheet" />
 	</head>
 	<body>
 		<header class="header">
@@ -49,6 +50,7 @@
 				<button class="header-btn btn" data-modal-open type="submit">
 					Online-booking
 				</button>
+				<button type="button" class="menu-open-btn">0</button>
 			</div>
 		</header>
 		<main>
@@ -221,6 +223,7 @@
 								<img
 									src="./images/barbers-img-1.jpg"
 									alt="barbers photo"
+									srcset="./images/barbers-img-1-2x.jpg 2x"
 									width="370"
 									height="346"
 								/>
@@ -282,56 +285,49 @@
 					</ul>
 				</div>
 			</section>
-			<section>
+			<section class="gallery section">
 				<div class="container">
-					<p>In Latin, "barba" means "beard"</p>
+					<p class="gallery-top-text top-text">
+						In Latin, "barba" means "beard"
+					</p>
 					<h2 hidden="">our works</h2>
 					<ul class="gallery-list list">
 						<li>
-							<img
-								src="./images/gallery-img-1.jpg"
-								alt="barber`s work"
-								width="270"
-								height="360"
-							/>
+							<picture>
+								<source
+									srcset="
+										./images/gallery-img-1.jpg    1x,
+										./images/gallery-img-1-2x.jpg 2x
+									"
+									media="(min-width: 1200px)"
+								/>
+								<source
+									srcset="
+										./images/gallery-img-1-tab.jpg    1x,
+										./images/gallery-img-1-tab-2x.jpg 2x
+									"
+									media="(min-width: 768px)"
+								/>
+								<source
+									srcset="
+										./images/gallery-img-1-mob.jpg    1x,
+										./images/gallery-img-1-mob-2x.jpg 2x
+									"
+									media="(max-width: 767px)"
+								/>
+								<img
+									src="./images/gallery-img-1-mob.jpg"
+									alt="barber`s work"
+									width="270"
+									height="360"
+								/>
+							</picture>
 						</li>
 						<li>
 							<img
 								src="./images/gallery-img-2.jpg"
 								alt="barber`s work"
-								width="270"
-								height="360"
-							/>
-						</li>
-						<li>
-							<img
-								src="./images/gallery-img-3.jpg"
-								alt="barber`s work"
-								width="270"
-								height="360"
-							/>
-						</li>
-						<li>
-							<img
-								src="./images/gallery-img-4.jpg"
-								alt="barber`s work"
-								width="270"
-								height="360"
-							/>
-						</li>
-						<li>
-							<img
-								src="./images/gallery-img-1.jpg"
-								alt="barber`s work"
-								width="270"
-								height="360"
-							/>
-						</li>
-						<li>
-							<img
-								src="./images/gallery-img-2.jpg"
-								alt="barber`s work"
-								width="270"
+								width="418"
 								height="360"
 							/>
 						</li>
@@ -355,7 +351,7 @@
 					<div class="container"></div>
 				</div>
 			</section>
-			<div class="contact-wrap">
+			<!-- <div class="contact-wrap">
 				<div class="container">
 					<section class="online">
 						<h2 class="online-title title">Online-booking</h2>
@@ -417,9 +413,9 @@
 						<p>Every day from 9:00 to 22:00</p>
 					</section>
 				</div>
-			</div>
+			</div> -->
 		</main>
-		<footer>
+		<!-- <footer>
 			<p>&copy;Copyright 2020</p>
 			<ul>
 				<li>
@@ -433,11 +429,11 @@
 					>
 				</li>
 			</ul>
-		</footer>
+		</footer> -->
 
 		<!-------------------- MODAL ------------------------>
 
-		<div class="backdrop is-hidden" data-modal>
+		<!-- <div class="backdrop is-hidden" data-modal>
 			<div class="modal">
 				<button class="modal-close-btn" data-modal-close type="button">
 					X
@@ -515,7 +511,7 @@
 							>Privacy Policy <a href="">agree</a>
 						</label>
 					</div>
-					<!-- <div class="modal-field">
+					<div class="modal-field">
 						<label for="top-barber">Top barber</label>
 						<input
 							type="radio"
@@ -537,11 +533,11 @@
 						<input type="checkbox" name="type" id="hair" value="hair" />
 						<label for="beard">Beardcut</label>
 						<input type="checkbox" name="type" id="beard" value="beard" />
-					</div> -->
+					</div>
 					<button type="submit">Send</button>
 				</form>
 			</div>
-		</div>
+		</div> -->
 		<script src="./js/modal.js"></script>
 
 		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
